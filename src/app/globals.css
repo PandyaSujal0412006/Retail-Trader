@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1120;
+  --card: #0f1729;
+  --border: #1e2d4a;
+  --emerald: #10b981;
+  --rose: #f43f5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: #e2e8f0;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2d4a;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #243552;
+}
+
+/* Selection */
+::selection {
+  background: rgba(16, 185, 129, 0.2);
+  color: #e2e8f0;
+}
+
+/* Grid background */
+.grid-bg {
+  background-image: linear-gradient(
+      rgba(30, 45, 74, 0.25) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(30, 45, 74, 0.25) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glow utilities */
+.glow-emerald {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.12);
+}
+.glow-rose {
+  box-shadow: 0 0 30px rgba(244, 63, 94, 0.12);
+}
+
+/* Number font */
+.font-num {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
