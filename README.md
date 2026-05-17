@@ -2,8 +2,6 @@
 
 > A beautiful, modern, and highly-secure SaaS platform built for Retail Traders to analyze their trading history, calculate advanced equity curves, and manage risk parameters. 
 
-![TradeMudra Cover](<"https://trademudra.vercel.app/">
-) *(Add a screenshot of your dashboard here later)*
 
 TradeMudra bridges the gap between raw broker data and actionable insights. Built with a stunning dark-mode UI inspired by modern cyber-aesthetics, this application allows traders to easily drag-and-drop their broker CSV files and instantly see their performance metrics visualized in real-time.
 
