@@ -34,6 +34,7 @@ export function CsvUploader() {
   const [fileName, setFileName] = useState("");
   const [fileFormat, setFileFormat] = useState("");
   const [count, setCount] = useState(0);
+  const [isSliced, setIsSliced] = useState(false);
 
   const processFile = useCallback(
     async (file: File) => {
@@ -47,39 +48,29 @@ export function CsvUploader() {
       }
 
       const tier = profile?.tier || "free";
-      const limit = tier === "pro" ? Infinity : (tier === "plus" ? 10 : 1);
-
-      if (profile && profile.uploadCount >= limit) {
-        setState("error");
-        setErrorMsg(`Plan limit reached (${limit} uploads max). Please upgrade to upload more files.`);
-        return;
-      }
 
       setFileName(file.name);
       setFileFormat(fmt);
       setState("parsing");
 
       try {
-        const parsed = await parseTradeFile(file);
+        let parsed = await parseTradeFile(file);
         if (parsed.length === 0) {
           throw new Error(
             "No valid trades found. Check that the file has Symbol, Date, Quantity, Buy Price, and Sell Price columns."
           );
         }
+        
+        if (tier === "free" && parsed.length > 10) {
+           parsed = parsed.slice(0, 10);
+           setIsSliced(true);
+        } else {
+           setIsSliced(false);
+        }
+
         setTrades(parsed);
         setCount(parsed.length);
         setState("success");
-
-        if (user && profile && tier !== "pro") {
-          try {
-            await updateDoc(doc(db, "users", user.uid), {
-              uploadCount: profile.uploadCount + 1,
-            });
-            await refreshProfile();
-          } catch (err) {
-            console.error("Failed to update upload count", err);
-          }
-        }
       } catch (err) {
         setState("error");
         setErrorMsg(
@@ -172,6 +163,12 @@ export function CsvUploader() {
               <p className="text-sm font-medium text-emerald-400">
                 {count} trades loaded
               </p>
+              {isSliced && (
+                <p className="text-[10px] text-amber-500 font-medium px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 mt-1.5 mb-1 text-center leading-tight">
+                  Preview Limited to 10 Trades <br/>
+                  <a href="/pricing" className="text-emerald-400 hover:underline">Upgrade to unlock full history</a>
+                </p>
+              )}
               <p className="text-xs text-slate-500 mt-1 font-mono truncate max-w-[220px]">
                 {fileName}
               </p>
