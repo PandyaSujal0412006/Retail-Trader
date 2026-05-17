@@ -2,7 +2,8 @@
 
 > A beautiful, modern, and highly-secure SaaS platform built for Retail Traders to analyze their trading history, calculate advanced equity curves, and manage risk parameters. 
 
-![TradeMudra Cover](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop) *(Add a screenshot of your dashboard here later)*
+![TradeMudra Cover](<img width="1900" height="757" alt="image" src="https://github.com/user-attachments/assets/558ba026-21e7-470b-a5e2-338117b28fb3" />
+) *(Add a screenshot of your dashboard here later)*
 
 TradeMudra bridges the gap between raw broker data and actionable insights. Built with a stunning dark-mode UI inspired by modern cyber-aesthetics, this application allows traders to easily drag-and-drop their broker CSV files and instantly see their performance metrics visualized in real-time.
 
