@@ -98,6 +98,10 @@ export default function DashboardPage() {
                   <p>Account &rarr; Reports &rarr; Profit & Loss &rarr; Download Excel/CSV</p>
                 </div>
                 <div className="space-y-1">
+                  <span className="text-emerald-400 font-medium">Angel One:</span>
+                  <p>Account &rarr; Reports &rarr; Trade History / P&L &rarr; Download Excel/CSV</p>
+                </div>
+                <div className="space-y-1">
                   <span className="text-emerald-400 font-medium">Groww:</span>
                   <p>Profile &rarr; Reports &rarr; P&L Report &rarr; Download CSV</p>
                 </div>
