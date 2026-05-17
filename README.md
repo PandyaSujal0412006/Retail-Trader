@@ -10,7 +10,7 @@ TradeMudra bridges the gap between raw broker data and actionable insights. Buil
 - **🔒 Secure Authentication:** Powered by Firebase Auth, featuring mandatory email verification to keep user data strictly isolated.
 - **📊 Advanced Analytics Engine:** Parses raw broker CSV/XLSX files entirely client-side to calculate Win Rates, Total P&L, Max Drawdown, and generate interactive Equity Curves using Recharts.
 - **💸 3-Tier Subscription Model:** 
-  - **Free Tier:** Limited to 3 file imports.
+  - **Free Tier:** Limited to 1 file import.
   - **Plus Tier (₹10):** Up to 10 file imports.
   - **Pro Tier (₹300):** Unlimited data analysis.
 - **📱 Manual UPI Payment Flow:** Integrated BHIM/GPay QR Code generation. Users upload their UPI Transaction ID directly from the dashboard.

@@ -47,7 +47,7 @@ export function CsvUploader() {
       }
 
       const tier = profile?.tier || "free";
-      const limit = tier === "pro" ? Infinity : (tier === "plus" ? 10 : 3);
+      const limit = tier === "pro" ? Infinity : (tier === "plus" ? 10 : 1);
 
       if (profile && profile.uploadCount >= limit) {
         setState("error");
