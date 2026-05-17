@@ -12,19 +12,17 @@ export function Header() {
     <header className="border-b border-[#1e2d4a] bg-[#0B1120]/95 backdrop-blur-md sticky top-0 z-50">
       <div className="max-w-[1600px] mx-auto px-6 py-4 flex items-center justify-between">
         {/* Brand */}
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/25">
-            <TrendingUp className="w-4 h-4 text-white" />
+          <div className="flex items-center space-x-2">
+            <img src="/logo.png" alt="TradeMudra Logo" className="h-10 w-auto object-contain" />
+            <div>
+              <h1 className="text-base font-bold text-slate-100 tracking-tight leading-none">
+                TradeMudra
+              </h1>
+              <p className="text-[10px] text-slate-500 mt-0.5">
+                Trading Journal & Analytics
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-base font-bold text-slate-100 tracking-tight leading-none">
-              TradeVault
-            </h1>
-            <p className="text-[10px] text-slate-500 mt-0.5">
-              Indian Market Analytics
-            </p>
-          </div>
-        </div>
 
         {/* Right side */}
         <div className="flex items-center gap-6">

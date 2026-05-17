@@ -110,11 +110,17 @@ export default function DashboardPage() {
         <TradeLogTable />
 
         {/* Footer */}
-        <div className="border-t border-[#1e2d4a] pt-4 pb-6 flex items-center justify-between text-xs text-slate-600">
-          <span>
-            TradeMudra v1.0 · Built for Indian Retail Traders
-          </span>
-          <span>NSE · BSE · Zerodha · Angel One · Upstox</span>
+        <div className="border-t border-[#1e2d4a] pt-4 pb-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+          <div className="flex items-center space-x-1 text-center sm:text-left">
+            <span>&copy; {new Date().getFullYear()} TradeMudra. All rights reserved.</span>
+            <span className="hidden sm:inline">|</span>
+            <span>Owned by Sujal Pandya</span>
+          </div>
+          <div className="flex items-center space-x-3 text-center sm:text-right">
+            <a href="mailto:sujal.pandya0412006@gmail.com" className="hover:text-emerald-400 transition-colors">sujal.pandya0412006@gmail.com</a>
+            <span className="hidden sm:inline">|</span>
+            <a href="tel:+918799467476" className="hover:text-emerald-400 transition-colors">+91 87994 67476</a>
+          </div>
         </div>
       </main>
     </div>

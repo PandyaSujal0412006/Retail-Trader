@@ -56,4 +56,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The admin panel is securely isolated at `/admin`. It requires authorized hardcoded credentials to access the financial analytics and verification queue.
 
 ---
-*Built with ❤️ for modern retail traders.*
+### ⚖️ Legal & Copyright
+**© 2024 TradeMudra.** All rights of this website, design, and source code are strictly reserved and owned by **Sujal Pandya**.
+- **Email:** sujal.pandya0412006@gmail.com
+- **Phone:** +91 87994 67476
+
+*Unauthorized distribution or copying of this material is prohibited.*
