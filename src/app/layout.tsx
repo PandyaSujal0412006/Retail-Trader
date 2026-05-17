@@ -4,13 +4,13 @@ import { TradeProvider } from "@/contexts/TradeContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 
 export const metadata: Metadata = {
-  title: "TradeVault — Indian Market Analytics Dashboard",
+  title: "TradeMudra — Indian Market Analytics Dashboard",
   description:
     "Premium retail trader analytics dashboard for the Indian stock market. Track P&L, win rate, profit factor, and equity curve with Zerodha/Angel One CSV import.",
   keywords: "trading dashboard, NSE, BSE, Zerodha, P&L tracker, equity curve, India",
-  authors: [{ name: "TradeVault" }],
+  authors: [{ name: "TradeMudra" }],
   openGraph: {
-    title: "TradeVault — Indian Market Analytics",
+    title: "TradeMudra — Indian Market Analytics",
     description: "Premium trading analytics for retail investors",
     type: "website",
   },

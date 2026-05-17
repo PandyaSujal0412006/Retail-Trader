@@ -112,7 +112,7 @@ export default function DashboardPage() {
         {/* Footer */}
         <div className="border-t border-[#1e2d4a] pt-4 pb-6 flex items-center justify-between text-xs text-slate-600">
           <span>
-            TradeVault v1.0 · Built for Indian Retail Traders
+            TradeMudra v1.0 · Built for Indian Retail Traders
           </span>
           <span>NSE · BSE · Zerodha · Angel One · Upstox</span>
         </div>

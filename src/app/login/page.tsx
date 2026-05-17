@@ -52,7 +52,7 @@ export default function LoginPage() {
                     <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
                         <Activity className="w-6 h-6 text-white" />
                     </div>
-                    <h1 className="text-2xl font-bold text-white tracking-tight">TradeVault</h1>
+                    <h1 className="text-2xl font-bold text-white tracking-tight">TradeMudra</h1>
                     <p className="text-sm text-slate-400">Sign in to your account</p>
                 </div>
 

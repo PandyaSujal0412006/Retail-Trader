@@ -121,7 +121,7 @@ export default function PricingPage() {
                 <Shield className="w-8 h-8 text-emerald-400" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-                Choose Your Plan
+                Upgrade to TradeMudra <span className="text-emerald-400">Pro</span>
               </h1>
               <p className="text-slate-400 max-w-lg mx-auto">
                 Select a plan that fits your trading volume.
