@@ -3,12 +3,25 @@
 import { useEffect } from "react";
 import { Header } from "@/components/dashboard/Header";
 import { SummaryCards } from "@/components/dashboard/SummaryCards";
-import { EquityCurve } from "@/components/dashboard/EquityCurve";
-import { CsvUploader } from "@/components/dashboard/CsvUploader";
-import { TradeLogTable } from "@/components/dashboard/TradeLogTable";
 import { FileDown, Loader2 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+
+const EquityCurve = dynamic(() => import("@/components/dashboard/EquityCurve").then(mod => mod.EquityCurve), { 
+  ssr: false, 
+  loading: () => <div className="h-[400px] flex items-center justify-center border border-[#1e2d4a] rounded-xl bg-[#0F1729]"><Loader2 className="w-6 h-6 text-emerald-500 animate-spin" /></div> 
+});
+
+const CsvUploader = dynamic(() => import("@/components/dashboard/CsvUploader").then(mod => mod.CsvUploader), { 
+  ssr: false,
+  loading: () => <div className="h-[200px] flex items-center justify-center border-2 border-dashed border-[#1e2d4a] rounded-xl"><Loader2 className="w-6 h-6 text-emerald-500 animate-spin" /></div> 
+});
+
+const TradeLogTable = dynamic(() => import("@/components/dashboard/TradeLogTable").then(mod => mod.TradeLogTable), { 
+  ssr: false,
+  loading: () => <div className="h-[300px] flex items-center justify-center border border-[#1e2d4a] rounded-xl bg-[#0F1729]"><Loader2 className="w-6 h-6 text-emerald-500 animate-spin" /></div> 
+});
 
 export default function DashboardPage() {
   const { user, loading } = useAuth();
