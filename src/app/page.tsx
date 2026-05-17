@@ -69,6 +69,27 @@ export default function DashboardPage() {
               </p>
               <CsvUploader />
             </div>
+
+            {/* Guidelines Card */}
+            <div className="rounded-xl border border-[#1e2d4a] bg-[#0F1729] p-5">
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                How to get your Trade Log?
+              </p>
+              <div className="space-y-3 text-xs text-slate-400">
+                <div className="space-y-1">
+                  <span className="text-emerald-400 font-medium">Zerodha Kite:</span>
+                  <p>Console &rarr; Reports &rarr; Tradebook &rarr; Select Dates &rarr; Download CSV</p>
+                </div>
+                <div className="space-y-1">
+                  <span className="text-emerald-400 font-medium">Upstox:</span>
+                  <p>Account &rarr; Reports &rarr; Profit & Loss &rarr; Download Excel/CSV</p>
+                </div>
+                <div className="space-y-1">
+                  <span className="text-emerald-400 font-medium">Groww:</span>
+                  <p>Profile &rarr; Reports &rarr; P&L Report &rarr; Download CSV</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
